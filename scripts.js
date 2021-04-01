@@ -1,5 +1,5 @@
 const Gameboard = (() => {
-    let gameboard = [['x','0','x'],['x','0','x'],['x','0','x']];
+    let gameboard = [['','',''],['','',''],['','','']];
     function renderGameboard() {
         const container = document.querySelector('#container');
         let counter = 0;
@@ -22,11 +22,28 @@ const Gameboard = (() => {
 })();
 
 const PlayerFactory = name => {
+    choose : () => {
+        const container = document.querySelector('#container');
+        const pes = [...document.querySelectorAll('p')];
+        pes.forEach(p => {
+            p.addEventListener('click', () => {
+                if(p.innerHTML === '')
+                {
+                    p.innerHTML = this.name;
+                }
+            });
+        });
+        
+        }
 
-}
+    }
 
 const DisplayController = () => {
 
+
+
 }
+
+const player = PlayerFactory('x');
 
 Gameboard.renderGameboard();
