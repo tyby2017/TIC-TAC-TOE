@@ -7,6 +7,11 @@ body {
     padding:0;
 }
 
+:root {
+    --cell-size:100px;
+    --mark-size:calc(var(--cell-size)*.9);
+}
+
 .header {
     height:30vh;
     width:100vw;
@@ -29,9 +34,13 @@ body {
 }
 
 .cell {
-    color:brown;
-    height:100px;
-    width:100px;
+    color:white;
+    height:var(--cell-size);
+    width:var(--cell-size);
     background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:var(--mark-size);
 }
 
