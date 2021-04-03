@@ -31,11 +31,12 @@ function handleClick(e) {
     });
 
     if(checkWin(currentMarks)) {
-        console.log('Winner is ', currentMark);
+        const winner = currentMark;
+        displayResult(`Winner is ${winner}`);
         
     }
     else if(checkFullBoard()) {
-        console.log('Draw');
+        displayResult('Draw');
     }
     changeTurn();
 }
@@ -67,8 +68,18 @@ function checkFullBoard() {
     });
 }
 
-function endGame() {
-    
+function displayResult(string) {
+    const reveal = document.querySelector('.hidden');
+    const h2 = document.createElement('h1');
+    h2.textContent = string;
+    const restart = document.querySelector('#restart');    
+    reveal.insertBefore(h2,restart);
+    reveal.classList.add('result');
+    setRestart(restart);
+}
+
+function setRestart(restart) {
+    restart.addEventListener('click',() => location.reload())
 }
 
 

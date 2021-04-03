@@ -48,3 +48,22 @@ body {
     font-size:var(--mark-size);
 }
 
+.hidden {
+    display:none;
+}
+
+.result {
+    display:block !important;
+    height: 100vh;
+    width:100vw;
+    background-color: black;
+    color:white;
+    opacity: .9;
+    position:fixed;
+    top:0;
+    text-align: center;
+    padding-top:40vh;
+}
+
+
+
