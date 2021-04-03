@@ -31,9 +31,13 @@ function handleClick(e) {
     });
 
     if(checkWin(currentMarks)) {
-        console.log('Winner', currentMark);
+        console.log('Winner is ', currentMark);
+        
     }
-    xTurn = !xTurn;
+    else if(checkFullBoard()) {
+        console.log('Draw');
+    }
+    changeTurn();
 }
 
 
@@ -53,9 +57,19 @@ function checkWin(currentMarks) {
         }        
 }
 
+function changeTurn() {
+    xTurn = !xTurn;
+}
 
+function checkFullBoard() {
+    return cells.every(cell => {
+        return cell.innerHTML != '';
+    });
+}
 
-
+function endGame() {
+    
+}
 
 
 
