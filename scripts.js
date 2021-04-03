@@ -41,7 +41,6 @@ function handleClick(e) {
     changeTurn();
 }
 
-
 function checkWin(currentMarks) {
         for(let i=0;i<WINNING_COMBINATIONS.length;i++) {
             let winner = true;

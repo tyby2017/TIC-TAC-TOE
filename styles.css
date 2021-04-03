@@ -10,10 +10,14 @@ body {
 :root {
     --cell-size:100px;
     --mark-size:calc(var(--cell-size)*.9);
-    --header-color:  cadetblue;
-    --container-color: brown;
-    --cell-color: black;
-    --mark-color:white;
+    --header-color: #5B89A6; 
+    --container-color:#426A8C;
+    --cell-color: #101C26;
+    --mark-color:#99D9F2;
+}
+
+h1 {
+    font-size:50px;
 }
 
 .header {
@@ -64,6 +68,3 @@ body {
     text-align: center;
     padding-top:40vh;
 }
-
-
-
