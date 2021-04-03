@@ -10,12 +10,16 @@ body {
 :root {
     --cell-size:100px;
     --mark-size:calc(var(--cell-size)*.9);
+    --header-color:  cadetblue;
+    --container-color: brown;
+    --cell-color: black;
+    --mark-color:white;
 }
 
 .header {
     height:30vh;
     width:100vw;
-    background-color: cadetblue;
+    background-color:var(--header-color);
     display: flex;
     flex-direction: column;
     justify-content:center;
@@ -25,7 +29,7 @@ body {
 .container {
     width:100vw;
     height:70vh;
-    background-color: brown;
+    background-color: var(--container-color);
     display: grid;
     grid-template-columns:repeat(3,auto);
     align-content: center;
@@ -34,10 +38,10 @@ body {
 }
 
 .cell {
-    color:white;
+    color:var(--mark-color);
     height:var(--cell-size);
     width:var(--cell-size);
-    background-color: black;
+    background-color: var(--cell-color);
     display: flex;
     align-items: center;
     justify-content: center;
